@@ -1,0 +1,35 @@
+.app-header {
+  position: relative;
+  min-height: 3.5rem;
+
+  // http://tholman.com/github-corners/
+  .github-corner {
+    svg {
+      fill: #20c997;
+      color: #FFFFFF;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0;
+      z-index: 1050;
+    }
+
+    &:hover .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
+    }
+  }
+
+  @keyframes octocat-wave {
+    0%, 100% { transform:rotate(0) }
+    20%, 60% { transform:rotate(-25deg) }
+    40%, 80% { transform:rotate(10deg) }
+  }
+
+  & + .app-flash {
+    margin-top: 3.5rem;
+  }
+
+  & + .app-breadcrumb {
+    margin-top: 4.5rem;
+  }
+}

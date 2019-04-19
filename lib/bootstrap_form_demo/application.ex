@@ -9,9 +9,10 @@ defmodule BootstrapFormDemo.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      BootstrapFormDemoWeb.Endpoint
+      BootstrapFormDemoWeb.Endpoint,
       # Starts a worker by calling: BootstrapFormDemo.Worker.start_link(arg)
       # {BootstrapFormDemo.Worker, arg},
+      BootstrapFormDemo.Repo
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -7,6 +7,12 @@
 # General application configuration
 use Mix.Config
 
+config :bootstrap_form_demo, ecto_repos: [BootstrapFormDemo.Repo]
+
+config :bootstrap_form_demo, BootstrapFormDemo.Repo,
+  database: "bootstrap_form_demo_repo",
+  hostname: "localhost"
+
 # Configures the endpoint
 config :bootstrap_form_demo, BootstrapFormDemoWeb.Endpoint,
   url: [host: "localhost"],

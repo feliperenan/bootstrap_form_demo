@@ -42,6 +42,8 @@ defmodule BootstrapFormDemoWeb do
       import BootstrapFormDemoWeb.ErrorHelpers
       import BootstrapFormDemoWeb.Gettext
       alias BootstrapFormDemoWeb.Router.Helpers, as: Routes
+
+      import BootstrapForm
     end
   end
 

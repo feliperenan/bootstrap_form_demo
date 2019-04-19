@@ -1,0 +1,23 @@
+<%= form_for @changeset, Routes.page_path(@conn, :create), fn f -> %>
+  <%= input f, :name, placeholder: "Inform your name" %>
+  <%= input f, :email, placeholder: "Inform your email" %>
+  <%= input f, :password, placeholder: "Password" %>
+  <%= input f, :bio, type: :textarea, placeholder: "Tell us more about you" %>
+  <%= input f, :language, type: :select, values: ~w(English Portuguese Estonian), label_text: "Select your language" %>
+
+  <div class="form-group">
+    <%= label f, :country, "Countries", class: "control-label" %>
+    <%= input f, :country, type: :collection_radio_buttons, collection: [{1, "Brazil"}, {2, "Estonia"}, {3, "Canada"}] %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :favorite_colors, "Favorite Colors", class: "control-label" %>
+    <%= input f, :favorite_colors, type: :collection_checkboxes, collection: ~w(Red Blue Green), hidden_input: false %>
+  </div>
+
+  <div class="form-group">
+    <%= input f, :active, type: :checkbox, label_text: "Active?" %>
+  </div>
+
+  <%= submit "Submit", class: "btn btn-primary" %>
+<% end %>

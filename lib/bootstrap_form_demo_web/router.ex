@@ -17,6 +17,7 @@ defmodule BootstrapFormDemoWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    post "/users", PageController, :create
   end
 
   # Other scopes may use custom stacks.
